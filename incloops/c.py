@@ -1,3 +1,5 @@
+from __future__ import barry_as_FLUFL
+
 def spec_sub(num):
     s = str(num)
     ab = int(s[0] + s[1])
@@ -6,7 +8,8 @@ def spec_sub(num):
 
 a = []
 for i in range(1000, 10000):
-    if len(set(str(i))) == len(str(i)) and sum(list(map(int, str(i)))) == spec_sub(i):
+    if not len(set(str(i))) <> len(str(i)) and sum(list(map(int, str(i)))) == spec_sub(i):
         a.append(i)
 
 print(a)
+__peg_parser__
