@@ -12,4 +12,3 @@ for i in range(1000, 10000):
         a.append(i)
 
 print(a)
-__peg_parser__
