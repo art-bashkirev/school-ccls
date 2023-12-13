@@ -1,0 +1,66 @@
+#pragma GCC optimize("O3,unroll-loops")
+#pragma GCC target("avx2,bmi,bmi2,lzcnt,popcnt")
+#include <iostream>
+#include <iterator>
+#include <algorithm>
+#include <vector>
+#include <map>
+#include <utility>
+#include <tuple>
+#include <cstdio>
+#include <thread>
+#include <string>
+#include <cstdlib>
+#include <regex>
+#include <cmath>
+#include <numeric>
+#include <bits/stdc++.h>
+
+using namespace std;
+
+#define ll long long
+#define pb push_back
+#define mp make_pair
+#define vi vector<int>
+#define vll vector<ll>
+#define mi map<int,int>
+#define mll map<ll,ll>
+#define si set<int>
+#define sll set<ll>
+#define pql priority_queue<ll>
+#define pqs priority_queue<int,vi,greater<int> >
+#define loopf(i, m, n, step) for (ll i = m;i < n; i += step)
+#define loopb(i, m, n, step) for (ll i = m;i > n; i -= step)
+#define wl(cond) while (cond)
+#define to_lower(s) transform(s.begin(), s.end(), s.begin(), ::tolower)
+#define to_upper(s) transform(s.begin(), s.end(), s.begin(), ::toupper)
+#define sz(v) ((ll)(v).size())
+#define all(v) (v).begin(), (v).end()
+#define mod 1000000007
+
+
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
+    // ...code... lonely here...
+
+    int d, x, y;
+    cin >> d >> x >> y;
+
+    if (y + x <= d && y >= 0 && x >= 0)
+    {
+        cout << 1;
+    }
+    else if (y == -x + d || (y == 0 && (0 <= x && x <= d)) || (x == 0 && (0 <= y && y <= d))) // On hypotenuse or on leg
+    {
+        cout << 1;
+    }
+    else
+    {
+        cout << 0;
+    }
+
+    return 0;
+}
